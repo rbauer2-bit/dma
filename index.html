@@ -167,7 +167,25 @@
     /* ── Hero ── */
     .hero {
       padding: 80px 0 64px;
-      background: linear-gradient(170deg, #F7F9FC 0%, #FFFFFF 60%);
+      background-color: #3a3a3c;
+      background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(170deg, rgba(37,170,225,0.85) 0%, rgba(88,88,90,0.9) 100%);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-inner {
@@ -180,8 +198,8 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-red);
-      background: #FDF2F2;
+      color: #FFFFFF;
+      background: rgba(255,255,255,0.2);
       padding: 6px 14px;
       border-radius: 20px;
       margin-bottom: 24px;
@@ -192,14 +210,14 @@
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -0.03em;
-      color: var(--color-text);
+      color: #FFFFFF;
       margin-bottom: 24px;
     }
 
     .hero p {
       font-size: 18px;
       line-height: 1.7;
-      color: var(--color-text-light);
+      color: rgba(255,255,255,0.9);
       margin-bottom: 40px;
       max-width: 620px;
     }
@@ -211,11 +229,28 @@
       margin-bottom: 48px;
     }
 
+    .hero .btn-primary {
+      background: #FFFFFF;
+      color: var(--color-primary);
+    }
+    .hero .btn-primary:hover {
+      background: #E6F4FC;
+    }
+
+    .hero .btn-secondary {
+      color: #FFFFFF;
+      border-color: #FFFFFF;
+    }
+    .hero .btn-secondary:hover {
+      background: #FFFFFF;
+      color: var(--color-primary);
+    }
+
     .trust-bar {
       font-size: 13px;
-      color: var(--color-text-light);
+      color: rgba(255,255,255,0.7);
       padding-top: 32px;
-      border-top: 1px solid var(--color-border);
+      border-top: 1px solid rgba(255,255,255,0.2);
     }
 
     /* ── Testimonials ── */
