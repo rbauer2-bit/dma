@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Marketing Authority | The Implant Intake System</title>
+  <meta name="description" content="The Implant Intake System that pre-qualifies prospects, educates anxious patients, and delivers ready-to-convert cases to your chair.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #0F4C81;
+      --color-primary-dark: #0A3660;
+      --color-accent: #2E8B57;
+      --color-accent-dark: #246D45;
+      --color-bg: #FFFFFF;
+      --color-bg-alt: #F7F9FC;
+      --color-bg-dark: #0F1B2D;
+      --color-text: #1A1A2E;
+      --color-text-light: #5A6376;
+      --color-text-inverse: #FFFFFF;
+      --color-border: #E2E8F0;
+      --color-gold: #D4A853;
+      --color-red: #C0392B;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --max-width: 1140px;
+      --transition: 0.2s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      transform: translateY(-1px);
+    }
+
+    .btn-white {
+      background: var(--color-text-inverse);
+      color: var(--color-primary);
+    }
+    .btn-white:hover {
+      background: #F0F4F8;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-lg {
+      padding: 18px 40px;
+      font-size: 17px;
+      border-radius: var(--radius-lg);
+    }
+
+    /* ── Header ── */
+    .header {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-text-light);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .header-cta {
+      padding: 10px 24px;
+      font-size: 14px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 0 64px;
+      background: linear-gradient(170deg, #F7F9FC 0%, #FFFFFF 60%);
+    }
+
+    .hero-inner {
+      max-width: 760px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-red);
+      background: #FDF2F2;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--color-text);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-text-light);
+      margin-bottom: 40px;
+      max-width: 620px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .trust-bar {
+      font-size: 13px;
+      color: var(--color-text-light);
+      padding-top: 32px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* ── Testimonials ── */
+    .testimonial {
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border-left: 4px solid var(--color-accent);
+    }
+
+    .testimonial blockquote {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .testimonial cite {
+      font-size: 14px;
+      color: var(--color-text-light);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* ── Section Shared ── */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-alt {
+      background: var(--color-bg-alt);
+    }
+
+    .section-dark {
+      background: var(--color-bg-dark);
+      color: var(--color-text-inverse);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .section-dark .section-subtitle {
+      color: #A0AEC0;
+    }
+
+    /* ── Problem Section ── */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .problem-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      transition: box-shadow var(--transition);
+    }
+
+    .problem-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #FDF2F2;
+      color: var(--color-red);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .problem-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .problem-card p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    .problem-callout {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Solution Banner ── */
+    .solution-banner {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .solution-banner .section-title {
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+
+    .solution-banner .section-subtitle {
+      color: #B8D0E8;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Steps ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 40px 32px;
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EBF5F0;
+    }
+
+    .step-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .step-number {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+
+    .step-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .step-card p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    /* ── Checklist ── */
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #EBF5F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .check-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .feature-card {
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      transition: box-shadow var(--transition);
+    }
+
+    .feature-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      background: #EBF5F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      max-width: 720px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px 0;
+    }
+
+    .faq-question {
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--color-text);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--color-text-light);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-top: 16px;
+    }
+
+    .faq-answer p {
+      font-size: 15px;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      padding: 80px 0;
+      background: var(--color-bg-dark);
+      color: var(--color-text-inverse);
+      text-align: center;
+    }
+
+    .cta-section .section-title {
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+
+    .cta-section .section-subtitle {
+      color: #A0AEC0;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-details {
+      font-size: 14px;
+      color: #718096;
+      margin-top: 16px;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .final-cta .section-title {
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+
+    .final-cta .section-subtitle {
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .final-cta-text {
+      font-size: 17px;
+      color: var(--color-text-light);
+      max-width: 580px;
+      margin: 24px auto 0;
+      line-height: 1.7;
+    }
+
+    .final-cta .btn {
+      margin-top: 32px;
+    }
+
+    .urgency-text {
+      font-size: 15px;
+      color: var(--color-red);
+      font-weight: 600;
+      margin-top: 24px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--color-text-light);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 56px 0 48px; }
+      .section { padding: 56px 0; }
+      .solution-banner { padding: 48px 0; }
+
+      .problems-grid,
+      .steps-grid,
+      .features-grid,
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-cta span { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .testimonial { padding: 24px; }
+      .problem-card, .step-card, .feature-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#0F4C81"/>
+          <path d="M10 12.5C10 10.5 11.5 9 14 9C16.5 9 18 10.5 18 12.5C18 10.5 19.5 9 22 9C24.5 9 26 10.5 26 12.5C26 14.5 25 16 23 18L18 23L13 18C11 16 10 14.5 10 12.5Z" fill="white" opacity="0.9"/>
+          <path d="M14.5 23L15.5 27L18 25.5L20.5 27L21.5 23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+        </svg>
+        <div class="logo-text">
+          Dental Marketing<span>Authority</span>
+        </div>
+      </a>
+      <a href="#book-call" class="btn btn-primary header-cta">
+        <span>Book Strategy Call</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-badge">Attention Implant Dentists</div>
+        <h1>Stop Wasting Consults on Patients Who Were Never Going to Buy</h1>
+        <p>The Implant Intake System that pre-qualifies prospects, educates anxious patients, and delivers ready-to-convert cases to your chair&mdash;without adding work for your team.</p>
+        <div class="hero-actions">
+          <a href="#how-it-works" class="btn btn-primary btn-lg">See How It Works</a>
+          <a href="#book-call" class="btn btn-secondary btn-lg">Book 10-Minute Strategy Call</a>
+        </div>
+        <div class="trust-bar">Trusted by leading implant practices across North America</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof 1 ── -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonial">
+        <blockquote>&ldquo;We went from 30% case acceptance to 78% in 90 days. The quality of patients calling is completely different now.&rdquo;</blockquote>
+        <cite>Dr. Sarah Chen, Oral Surgeon, Seattle</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Problems ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Why Implant Consults Aren&rsquo;t Converting</h2>
+      <p class="section-subtitle">Three costly patterns that drain your schedule, exhaust your team, and leave revenue on the table.</p>
+
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="problem-number">1</div>
+          <h3>Your Phone Rings But Cases Don&rsquo;t Close</h3>
+          <p>You get calls about implants. Your team schedules consults. Then patients ghost after hearing the investment. Or they shop around for months. Or they book just to ask about payment plans they can&rsquo;t afford. Most implant practices waste 60&ndash;70% of their consult slots on patients who were never qualified to begin with.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">2</div>
+          <h3>Your Team Becomes Expensive Phone Screeners</h3>
+          <p>Your front desk spends hours explaining implant basics to prospects who found you on Google. They field price-shopping calls. They book consultations with patients who aren&rsquo;t psychologically or financially ready for treatment. That&rsquo;s not what you hired them for. But when your website doesn&rsquo;t educate or qualify, your staff becomes the filter&mdash;at $25&ndash;35 per hour.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">3</div>
+          <h3>Implant Marketing Brings Quantity, Not Quality</h3>
+          <p>Most dental marketing focuses on more leads. More calls. More traffic. But what you actually need are fewer, better-qualified prospects who understand implants, respect the investment, and are ready to move forward.</p>
+        </div>
+      </div>
+      <p class="problem-callout">More isn&rsquo;t better. Better is better.</p>
+    </div>
+  </section>
+
+  <!-- ── Solution Banner ── -->
+  <section class="solution-banner">
+    <div class="container">
+      <h2 class="section-title">The Implant Intake System Solves All Three Problems</h2>
+      <p class="section-subtitle">Instead of just collecting contact information, your website becomes a 24/7 implant concierge that educates prospects, sets proper expectations, and pre-qualifies serious candidates before they ever call your office.</p>
+    </div>
+  </section>
+
+  <!-- ── How It Works ── -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three Steps to Better Implant Cases</h2>
+      <p class="section-subtitle">A systematic approach that filters before your team lifts a finger.</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528"/></svg>
+          </div>
+          <div class="step-number">Step 1</div>
+          <h3>Attract &amp; Educate</h3>
+          <p>Your website draws implant prospects with educational content that addresses their real concerns about pain, cost, and success rates&mdash;while positioning you as the trusted expert.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div class="step-number">Step 2</div>
+          <h3>Pre-Qualify Automatically</h3>
+          <p>Built-in assessment tools identify patients who are good candidates both clinically and financially, filtering out tire-kickers before they waste your team&rsquo;s time.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="step-number">Step 3</div>
+          <h3>Deliver Ready Prospects</h3>
+          <p>Only qualified, educated prospects reach your team. They understand the process, respect the investment, and are prepared to move forward with treatment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof 2 ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="testimonial">
+        <blockquote>&ldquo;Before the Intake System, we were booking 15&ndash;20 implant consults per month with maybe 4&ndash;5 converting. Now we book 8&ndash;10 consults and convert 7&ndash;8. Our team loves the change.&rdquo;</blockquote>
+        <cite>Dr. Michael Torres, Periodontist, Austin</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What You Get ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">What You Get</div>
+      <h2 class="section-title">Everything Included with the Implant Intake System</h2>
+
+      <div class="checklist">
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Higher case acceptance rates from better-qualified prospects</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Reduced time spent on phone screening and education</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>More predictable implant revenue month over month</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Less stress for your team dealing with price shoppers</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Patients who arrive informed and ready to proceed</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Automated follow-up for prospects not ready today</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Clear differentiation from other implant providers</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-icon"><svg viewBox="0 0 12 12"><path d="M2 6l3 3 5-5"/></svg></div>
+          <span>Professional credibility that justifies premium fees</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof 3 ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="testimonial">
+        <blockquote>&ldquo;The system paid for itself in the first month. We closed three full-arch cases from prospects who came through the new intake process.&rdquo;</blockquote>
+        <cite>Dr. Jennifer Walsh, General Dentist, Phoenix</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Exclusive Features</div>
+      <h2 class="section-title">Built Specifically for Implant Practices</h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>Implant Readiness Assessment</h3>
+          <p>Interactive tool that evaluates candidates based on bone health, medical history, and treatment goals before they contact your office.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Cost Education Module</h3>
+          <p>Transparent investment information that eliminates sticker shock and attracts patients who understand implant value.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3>Anxiety Reduction Content</h3>
+          <p>Video testimonials and procedure explanations that calm nervous prospects and build confidence in your expertise.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>Smart Scheduling Integration</h3>
+          <p>Automated booking system that only allows qualified prospects to schedule consultation appointments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Social Proof 4 ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="testimonial">
+        <blockquote>&ldquo;I was skeptical about being so upfront about costs online. But it&rsquo;s been amazing. The patients who call are already comfortable with our fees and ready to schedule treatment.&rdquo;</blockquote>
+        <cite>Dr. Robert Kim, Oral Surgeon, Denver</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Section ── -->
+  <section class="cta-section" id="book-call">
+    <div class="container">
+      <div class="section-label" style="color: var(--color-gold);">Take the Next Step</div>
+      <h2 class="section-title">Ready to Stop Wasting Consults on Unqualified Prospects?</h2>
+      <p class="section-subtitle">Book a 10-minute strategy call to see exactly how the Implant Intake System would work for your practice. We&rsquo;ll show you where cases are leaking and how to plug those holes.</p>
+      <a href="#" class="btn btn-white btn-lg">Book Your Strategy Call Now</a>
+      <p class="cta-details">No pitch. No pressure. Just a clear look at what&rsquo;s possible.</p>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div style="text-align: center;">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">Will being upfront about costs scare away potential patients?</div>
+          <div class="faq-answer">
+            <p>It scares away the wrong patients and attracts the right ones. Practices using our system report 40&ndash;60% higher case acceptance because prospects are pre-qualified and educated before the consult.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does it take to see results?</div>
+          <div class="faq-answer">
+            <p>Most practices notice improved call quality within 2&ndash;3 weeks. Full system optimization typically takes 60&ndash;90 days, but the investment pays for itself quickly through higher conversion rates.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you work with general dentists or just specialists?</div>
+          <div class="faq-answer">
+            <p>We work with any dentist who places or restores implants. The system adapts to your specific scope of practice and referral relationships.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if I already have a website?</div>
+          <div class="faq-answer">
+            <p>We can integrate the Intake System with your existing site or build a dedicated implant landing page. The key is the qualification and education process, not starting from scratch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="final-cta">
+    <div class="container">
+      <h2 class="section-title">Don&rsquo;t Let Another Month Go By Wasting Consults on Patients Who Were Never Going to Buy</h2>
+      <p class="section-subtitle">The Implant Intake System is working for practices across North America. Your competitors are already using systems like this to attract better patients and close more cases.</p>
+      <p class="urgency-text">Every day you wait is another day of wasted consults and missed revenue.</p>
+      <p class="final-cta-text">Book your 10-minute strategy call now and see exactly how this works for implant practices like yours.</p>
+      <a href="#book-call" class="btn btn-primary btn-lg">Book Strategy Call &mdash; No Risk, No Obligation</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Dental Marketing Authority. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ── FAQ Toggle Script ── -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(question) {
+      question.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('open');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
